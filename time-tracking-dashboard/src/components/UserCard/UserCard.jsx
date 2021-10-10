@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import classNames from "classnames";
 import UserImg from "../../assets/images/image-jeremy.png";
 import "./UserCard.scss";
 
@@ -22,7 +21,7 @@ function UserCard() {
       <div className="card-filters">
         <ul>
           <li
-            className={classNames({ isActive: activeFilter === "daily" })}
+            className={`${activeFilter === "daily" ? "isActive" : ""}`}
             onClick={() => {
               setActiveFilter("daily");
             }}
@@ -30,7 +29,7 @@ function UserCard() {
             Daily
           </li>
           <li
-            className={classNames({ isActive: activeFilter === "monthly" })}
+            className={`${activeFilter === "monthly" ? "isActive" : ""}`}
             onClick={() => {
               setActiveFilter("monthly");
             }}
@@ -38,7 +37,7 @@ function UserCard() {
             Monthly
           </li>
           <li
-            className={classNames({ isActive: activeFilter === "yearly" })}
+            className={`${activeFilter === "yearly" ? "isActive" : ""}`}
             onClick={() => {
               setActiveFilter("yearly");
             }}
