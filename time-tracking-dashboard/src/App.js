@@ -1,4 +1,5 @@
-import './App.css';
+import './App.scss';
+import { UserCard } from './components';
 
 function App() {
   return (
@@ -8,6 +9,9 @@ function App() {
           TIme Tracking Dashboard
         </p>
       </header>
+      <section className='user-card'>
+        <UserCard />
+      </section>
     </div>
   );
 }
