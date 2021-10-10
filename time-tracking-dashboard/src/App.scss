@@ -1,0 +1,13 @@
+@import "./_common/colors";
+.App {
+  text-align: center;
+  color: antiquewhite;
+  background-color: $very-dark-blue;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  .user-card {
+    margin-left: 160px;
+  }
+}
