@@ -13,7 +13,10 @@
     background-color: $primary-blue;
     border-radius: 10px;
     .user-img {
-      width: 70px;
+      width: 70px !important;
+      height: 70px !important;
+      border-radius: 50%;
+      border: 2px #fff solid;
       img {
         width: inherit;
         border-width: 2px;
@@ -29,8 +32,29 @@
         margin-bottom: 10px;
       }
       .user-name {
-          font-size: 40px;
-          font-weight: 300;
+        font-size: 40px;
+        font-weight: 300;
+      }
+    }
+  }
+  .card-filters {
+    ul {
+      padding-top: 10px;
+      list-style-type: none;
+      text-align: left;
+      .isActive {
+        color: #fff;
+      }
+      li {
+        margin-bottom: 15px;
+        font-size: 18px;
+        font-weight: 300;
+        color: $desaturated-blue;
+        
+        &:hover {
+          color: #fff;
+          cursor: pointer;
+        }
       }
     }
   }

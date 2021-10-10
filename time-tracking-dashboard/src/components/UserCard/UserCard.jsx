@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import classNames from "classnames";
 import UserImg from "../../assets/images/image-jeremy.png";
 import "./UserCard.scss";
 
 function UserCard() {
+  const [activeFilter, setActiveFilter] = useState("daily");
   return (
     <div className="card-wrapper">
       <div className="card-content">
@@ -19,9 +21,30 @@ function UserCard() {
       </div>
       <div className="card-filters">
         <ul>
-          <li>Daily</li>
-          <li>Monthly</li>
-          <li>Yearly</li>
+          <li
+            className={classNames({ isActive: activeFilter === "daily" })}
+            onClick={() => {
+              setActiveFilter("daily");
+            }}
+          >
+            Daily
+          </li>
+          <li
+            className={classNames({ isActive: activeFilter === "monthly" })}
+            onClick={() => {
+              setActiveFilter("monthly");
+            }}
+          >
+            Monthly
+          </li>
+          <li
+            className={classNames({ isActive: activeFilter === "yearly" })}
+            onClick={() => {
+              setActiveFilter("yearly");
+            }}
+          >
+            Yearly
+          </li>
         </ul>
       </div>
     </div>
